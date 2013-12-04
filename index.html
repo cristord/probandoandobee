@@ -11,7 +11,19 @@
 
 		<link rel="shortcut icon" href="http://ovv.aquilesazar.org/images/favicon.ico">
 		<meta property="og:type" content="website">
-
+<script>
+$(window).load(function() {
+    $.post("http://apps.aquilesazar.org/apps.php", { h: 0 },
+		function(data) {
+			$('#apps').html("");
+			$.each(data, function(i, item) {
+				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+item.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
+				$(".icon-"+item.ID).fadeIn();
+			});
+		}
+	,"json");
+});
+</script>
 
 <style>
 	.icono {
@@ -91,7 +103,7 @@ a:hover {
 
 			<div style="border-top: 1px solid  #E2E2E2; margin: 20px; padding-top: 20px; border-bottom: 1px solid  #E2E2E2; padding-bottom: 7px;">
 		<div style="margin: auto 0px;">
-		<center id="apps"><a title="Web del ministerio" class="icono icon-1" href="http://www.aquilesazar.org/" style="float: left;"><img width="90px" src="https://lh5.googleusercontent.com/-3s9Edot_azU/Uo4sR4TfWQI/AAAAAAAAAEU/qPWqWc3ntMA/s64/icono_maa.png"></a><a title="Servicios Online" class="icono icon-2" href="http://envivo.aquilesazar.org/" style="float: left;"><img width="90px" src="https://lh5.googleusercontent.com/-bJ5h5r9mtTQ/Uo4tRSkhsBI/AAAAAAAAAEg/Gy-ngqwYvFI/s64/icono_live.png"></a><a title="null" class="icono icon-3" href="http://calendario.aquilesazar.org/" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/all_google_icons_symbols_by_carlosjj-du/128/event_calendar-lb.png"></a><a title="Ofrendas Online" class="icono icon-4" href="http://www.aquilesazar.org/#!donaciones/c24vq" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/sociality/64/paypal.png"></a><a title="Facebook" class="icono icon-5" href="https://www.facebook.com/ministeriosaquilesazar" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/64/facebook.png"></a><a title="Twitter" class="icono icon-6" href="https://twitter.com/aquilesazar" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/64/twitter.png"></a><a title="Youtube" class="icono icon-7" href="http://www.youtube.com/user/aquilesazar" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/64/youtube.png"></a><a title="Blog del ministerio" class="icono icon-8" href="http://www.aquilesazarblog.org/" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/sociality/64/blogger.png"></a><a title="Instagram" class="icono icon-9" href="http://instagram.com/aquilesazar" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/windows-8-metro-style/64/instagram.png"></a><a title="iTunes del ministerio" class="icono icon-10" href="https://itunes.apple.com/do/artist/ministerios-aquiles-azar/id541651022" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/apple-ios7-icons/118/music_ios7_ios_7.png"></a><a title="null" class="icono icon-11" href="http://www.jotform.co/ministeriosaquilesazar/oraciones" style="float: left;"><img width="90px" src="https://lh3.googleusercontent.com/-u6p3aUSDVJQ/Uo-MLvfhCAI/AAAAAAAAAF8/sB3ZI5RGVHs/s64/prayyer.png"></a><a title="Skype" class="icono icon-12" href="#" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/64/skype.png"></a><a title="Calculadora de diezmos" class="icono icon-13" href="http://calculadora.aquilesazar.org/" style="float: left;"><img width="90px" src="https://cdn1.iconfinder.com/data/icons/apple-ios7-icons/118/calculator_ios7_ios_7.png"></a></center>
+		<center id="apps"><img src="http://ovv.aquilesazar.org/images/cargando.gif" /></center>
 		<div class="clear"></div>
 		</div>
 
