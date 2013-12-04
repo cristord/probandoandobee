@@ -69,7 +69,12 @@ $(window).load(function() {
 		function(data) {
 			$('#apps').html("");
 			$.each(data, function(i, item) {
-				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+item.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
+				if(item.ID==2) {
+					url = "navigator.app.loadUrl(\''+item.url+'\', { openExternal:true } );";
+				} else {
+					url = item.url;
+				}
+				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
 				$(".icon-"+item.ID).fadeIn();
 			});
 		}
