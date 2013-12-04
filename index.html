@@ -81,7 +81,7 @@ a:hover {
                 <script src="https://code.jquery.com/jquery-latest.js" charset="UTF-8"></script>
                 <script>
                        $(window).load(function() {
-    $.post("/apps.php", { h: 0 },
+    $.post("http://apps.aquilesazar.org/apps.php", { h: 0 },
 		function(data) {
 			$('#apps').html("");
 			$.each(data, function(i, item) {
