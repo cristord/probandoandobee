@@ -16,6 +16,6 @@
     <author href="http://aquilesazar.org/" email="oficinadelavision@aquilesazar.org">
         Ministerios Aquiles Azar
     </author>
-
+<access origin="*" /> 
 
 </widget>
