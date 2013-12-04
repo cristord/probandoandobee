@@ -74,7 +74,7 @@ $(window).load(function() {
 				} else {
 					plus = "";
 				}
-				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+iten.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
+				$('#apps').append('<a '+plus+' title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+item.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
 				$(".icon-"+item.ID).fadeIn();
 			});
 		}
