@@ -16,9 +16,7 @@
     <author href="http://aquilesazar.org/" email="oficinadelavision@aquilesazar.org">
         Ministerios Aquiles Azar
     </author>
-    
-    <preference name="permissions" value="none"/>
-<feature name="http://api.phonegap.com/1.0/network"/>
+
 <access origin="http://aquilesazar.org/" subdomains="true" />
 
 </widget>
