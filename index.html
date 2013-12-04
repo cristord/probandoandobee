@@ -1,16 +1,125 @@
 <!doctype html>
 <html>
         <head>
-                <title>Mi aplicación</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Apps - Ministerios Aquiles Azar</title>
+		<meta name="description" lang="es" content="Aplicaciones de los Ministerios Aquiles Azar">
+
+		<link rel="shortcut icon" href="http://ovv.aquilesazar.org/images/favicon.ico" />
+<style>
+	.icono {
+		margin-right: 17px;
+		margin-bottom: 17px;
+	}
+
+	.clear {
+		clear: both;
+		width:100%;
+		height: 1px;
+	}
+
+.boton{
+border: 1px solid #298A08;
+color: white;
+text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+cursor: default;
+-webkit-user-select: none;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+font-weight: bold;
+height: 33px;
+padding: 0 11px;
+display: inline-block;
+min-width: 46px;
+text-align: center;
+
+}
+
+.boton-verde{
+background-color: #31B404;
+background: url('http://ovv.aquilesazar.org/images/backgreen.png');
+}
+
+.boton-verde:hover {
+border: 1px solid #298A08;
+color: #fff;
+text-shadow: 0 1px rgba(0,0,0,0.3);
+background-color: #74DF00;
+background: url('http://ovv.aquilesazar.org/images/obackgreen.png');
+
+}
+</style>
+
+<style>
+img {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+img:hover {
+  -webkit-filter: grayscale(100%);
+}
+a {
+	color: #3D7213;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+</style>
 
         </head>
 
         <body>
-                <div id="resultados"></div>
-                <button onclick="$('#resultados').html('Adiós!!'); alert(5434634);" id="silly">Do it</button>
+
                 <script src="https://code.jquery.com/jquery-latest.js" charset="UTF-8"></script>
                 <script>
-                        $('#resultados').html('Hola2!!!');
+                       $(window).load(function() {
+    $.post("/apps.php", { h: 0 },
+		function(data) {
+			$('#apps').html("");
+			$.each(data, function(i, item) {
+				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+item.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
+				$(".icon-"+item.ID).fadeIn();
+			});
+		}
+	,"json");
+});
                 </script>
+                
+                <center>
+		<div style="padding: 50px 0px; width: 95%; max-width: 700px; margin: auto 0;">
+
+			<center><a title="AquilesAzar.org" href="http://www.aquilesazar.org/"><img style="border: 0px;" width="250px" src="http://static.wixstatic.com/media/4eec47_d1f199e14ae821d124c363bba78937ac.png_srz_210_85_75_22_0.50_1.20_0.00_png_srz"></a></center>
+
+			<div style="border-top: 1px solid  #E2E2E2; margin: 20px; padding-top: 20px; border-bottom: 1px solid  #E2E2E2; padding-bottom: 7px;">
+		<div style="margin: auto 0px;">
+		<center id="apps">
+
+<img src="http://ovv.aquilesazar.org/images/cargando.gif" />
+
+		
+
+		</center>
+		<div class="clear"></div>
+		</div>
+
+
+		<div class="clear"></div>
+	</div>
+<div style="width:100%; margin: 20px; text-align:left;">
+			Apps Para: <a title="Extensión para Google Chrome" target="_blank" href="http://t.co/FWNoNeYzsg">Google Chrome</a> | <a title="Aplicación para Facebook" href="https://www.facebook.com/ministeriosaquilesazar/app_416267028479645">Facebook</a> | <a title="Apps en la web" href="/">Web</a>
+</div>
+		</div>
+
+</center>
+
+	</body>
         </body>
 </html>
