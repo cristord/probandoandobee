@@ -4,11 +4,12 @@
 		<meta name="description" lang="es" content="Aplicaciones de los Ministerios Aquiles Azar para chrome, firefox, android, facebook, cultos en vivo, ios, etc.">
 
 		
-		<meta name="viewport"  content="width=device-width, height=device-height, initial-scale=0.8, user-scalable=1" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, target-densityDpi=device-dpi" />
 
 		<script src="https://code.jquery.com/jquery-latest.js"></script>
 
 <script>
+$.support.cors = true;
 $(window).load(function() {
     $.post("http://apps.aquilesazar.org/apps.php", { h: 0 },
 		function(data) {
