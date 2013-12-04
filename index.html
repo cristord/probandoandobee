@@ -70,11 +70,11 @@ $(window).load(function() {
 			$('#apps').html("");
 			$.each(data, function(i, item) {
 				if(item.ID==2) {
-					url = "navigator.app.loadUrl(\''+item.url+'\', { openExternal:true } );";
+					plus = ' target="_blank"';
 				} else {
-					url = item.url;
+					plus = "";
 				}
-				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
+				$('#apps').append('<a title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+iten.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
 				$(".icon-"+item.ID).fadeIn();
 			});
 		}
