@@ -1,161 +1,58 @@
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Ministerios Aquiles Azar</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 
-    <icon src="icon.png" />
-
-    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-
-    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-
-    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-
-    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
-
-    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
-
-    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
-
-    <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-
-    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
-
-    <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
-
-    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
-
-    <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
-
-    <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-
-    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
-
-    
-    
-		<title>Ministerios Aquiles Azar</title>
 		<meta name="description" lang="es" content="Aplicaciones de los Ministerios Aquiles Azar para chrome, firefox, android, facebook, cultos en vivo, ios, etc.">
 
-		
-	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, target-densityDpi=device-dpi" />
+		<link rel="canonical" href="http://apps.aquilesazar.org/"/>
+		<meta property="og:url" content="http://apps.aquilesazar.org/">
+		<meta property="og:title" content="Aplicaciones de los Ministerios Aquiles Azar">
+		<meta property="og:description" content="Aplicaciones de los Ministerios Aquiles Azar para chrome, firefox, android, facebook, cultos en vivo, ios, etc.">
+		<meta property="og:image" content="https://lh5.googleusercontent.com/-3s9Edot_azU/Uo4sR4TfWQI/AAAAAAAAAEU/qPWqWc3ntMA/s64/icono_maa.png">
 
-		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<link rel="shortcut icon" href="http://ovv.aquilesazar.org/images/favicon.ico" />
+		<meta property="og:type" content="website">
 
-<script>
-$.support.cors = true;
-$(window).load(function() {
-    $.post("http://apps.aquilesazar.org/apps.php", { h: 0 },
-		function(data) {
-			$('#apps').html("");
-			$.each(data, function(i, item) {
-				if(item.ID==2) {
-					plus = ' target="_blank"';
-				} else {
-					plus = "";
-				}
-				$('#apps').append('<a '+plus+' title="'+item.name+'" class="icono icon-'+item.ID+'" href="'+item.url+'" style="float: left; display:none;"><img width="90px" src="'+item.image+'"></a>');
-				$(".icon-"+item.ID).fadeIn();
+		<script>
+				$.support.cors = true;
+				$.mobile.buttonMarkup.hoverDelay = true;
+			$(window).load(function() {
+				$.post("http://apps.aquilesazar.org/apps.php", { h: 0 },
+					function(data) {
+						$('#apps').html("");
+						$.each(data, function(i, item) {
+						$('#apps').append('<a rel="external" id="boton'+item.ID+'" href="'+item.url+'" class="elboton" data-role="button">'+item.name+'</a>');
+						$('#boton'+item.ID).button();
 			});
 		}
 	,"json");
 });
-</script>
+                </script>
+</head>
 
+<body> 
 
-<style>
-	.icono {
-		margin-right: 17px;
-		margin-bottom: 17px;
-	}
+<!-- Start of first page -->
+<div data-role="page" id="foo" data-title="Page Foo" data-theme="a">
 
-	.clear {
-		clear: both;
-		width:100%;
-		height: 1px;
-	}
+	<div data-role="header"><a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" data-theme="a" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" title="My button" class="ui-btn ui-btn-inline ui-btn-icon-notext ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-btn-text">My button</span><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></span></a>
+		<h1>Ministerios Aquiles Azar</h1>
+	</div><!-- /header -->
 
-.boton{
-border: 1px solid #298A08;
-color: white;
-text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-cursor: default;
--webkit-user-select: none;
--webkit-border-radius: 2px;
--moz-border-radius: 2px;
-border-radius: 2px;
-font-weight: bold;
-height: 33px;
-padding: 0 11px;
-display: inline-block;
-min-width: 46px;
-text-align: center;
+	<div data-role="content" id="apps">
+			<center>Cargando...</center>
+	</div><!-- /content -->
 
-}
+	<div data-role="footer">
+		<h4>Todos los Derechos Reservados</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 
-.boton-verde{
-background-color: #31B404;
-background: url('http://ovv.aquilesazar.org/images/backgreen.png');
-}
-
-.boton-verde:hover {
-border: 1px solid #298A08;
-color: #fff;
-text-shadow: 0 1px rgba(0,0,0,0.3);
-background-color: #74DF00;
-background: url('http://ovv.aquilesazar.org/images/obackgreen.png');
-
-}
-</style>
-
-<style>
-img {
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
-}
-
-img:hover {
-  -webkit-filter: grayscale(100%);
-}
-a {
-	color: #3D7213;
-	text-decoration: none;
-	font-weight:bold;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-</style>
-
-	</head>
-
-	<body style="">
-<center>
-		<div style="padding: 50px 0px; width: 95%; max-width: 700px; margin: auto 0;">
-
-			<center><a title="AquilesAzar.org" href="http://www.aquilesazar.org/"><img style="border: 0px;" width="250px" src="http://static.wixstatic.com/media/4eec47_d1f199e14ae821d124c363bba78937ac.png_srz_210_85_75_22_0.50_1.20_0.00_png_srz"></a></center>
-
-			<div style="border-top: 1px solid  #E2E2E2; margin: 20px; padding-top: 20px; border-bottom: 1px solid  #E2E2E2; padding-bottom: 7px;">
-		<div style="margin: auto 0px;">
-		<center id="apps"><img src="http://ovv.aquilesazar.org/images/cargando.gif" /></center>
-		<div class="clear"></div>
-		</div>
-
-
-		<div class="clear"></div>
-	</div>
-<div style="width:100%; margin: 20px; text-align:left;">
-			Apps Para: <a title="Extensión para Google Chrome" target="_blank" href="http://t.co/FWNoNeYzsg">Google Chrome</a> | <a title="Aplicación para Facebook" href="https://www.facebook.com/ministeriosaquilesazar/app_416267028479645">Facebook</a> | <a title="Apps en la web" href="/">Web</a>
-</div>
-		</div>
-
-</center>
-
-	
-
-
-
-
-</body></html>
+</body>
