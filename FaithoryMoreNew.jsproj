@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|iOS">
+      <Configuration>Debug</Configuration>
+      <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-x64">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-x86">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows Phone 8">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows Phone 8</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows Phone (Universal)">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows Phone (Universal)</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Android">
+      <Configuration>Release</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|iOS">
+      <Configuration>Release</Configuration>
+      <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-x64">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-x86">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-ARM">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows Phone 8">
+      <Configuration>Release</Configuration>
+      <Platform>Windows Phone 8</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows Phone (Universal)">
+      <Configuration>Release</Configuration>
+      <Platform>Windows Phone (Universal)</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Android">
+      <Configuration>Distribution</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|iOS">
+      <Configuration>Distribution</Configuration>
+      <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-AnyCPU">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-x64">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-x86">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-ARM">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows Phone 8">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows Phone 8</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows Phone (Universal)">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows Phone (Universal)</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>c0ed633d-112a-482e-978b-8540e9aaf542</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0'">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Content Include="emulator\core_calendar_get_calendar_events.json" />
+    <Content Include="emulator\core_course_get_contents.json" />
+    <Content Include="emulator\core_get_component_strings.json" />
+    <Content Include="emulator\index.html" />
+    <Content Include="emulator\local_mobile_core_files_get_files.json" />
+    <Content Include="emulator\local_mobile_core_grades_get_grades.json" />
+    <Content Include="emulator\local_mobile_core_message_get_contacts.json" />
+    <Content Include="emulator\local_mobile_core_message_get_messages.json" />
+    <Content Include="emulator\local_mobile_core_user_add_user_device.json" />
+    <Content Include="emulator\local_mobile_gradereport_user_get_grades_table.json" />
+    <Content Include="emulator\local_mobile_mod_forum_get_forums_by_courses.json" />
+    <Content Include="emulator\local_mobile_mod_forum_get_forum_discussions_paginated.json" />
+    <Content Include="emulator\local_mobile_mod_forum_get_forum_discussion_posts.json" />
+    <Content Include="emulator\mod_assign_get_assignments.json" />
+    <Content Include="emulator\mod_assign_get_submissions.json" />
+    <Content Include="emulator\moodle_enrol_get_users_courses.json" />
+    <Content Include="emulator\moodle_user_get_course_participants_by_id.json" />
+    <Content Include="emulator\moodle_user_get_users_by_courseid.json" />
+    <Content Include="emulator\moodle_webservice_get_siteinfo.json" />
+    <Content Include="emulator\userimage.png" />
+    <Content Include="externallib\backbone-localstorage.js" />
+    <Content Include="externallib\backbone.js" />
+    <Content Include="externallib\html2canvas.js" />
+    <Content Include="externallib\jquery-ui.custom.min.js" />
+    <Content Include="externallib\jquery.min.js" />
+    <Content Include="externallib\jquery.touchSwipe.min.js" />
+    <Content Include="externallib\matchMedia.addListener.js" />
+    <Content Include="externallib\matchMedia.js" />
+    <Content Include="externallib\md5.js" />
+    <Content Include="externallib\recorder.js" />
+    <Content Include="externallib\recorderWorker.js" />
+    <Content Include="externallib\require.js" />
+    <Content Include="externallib\text.js" />
+    <Content Include="externallib\underscore.js" />
+    <Content Include="icon.png" />
+    <Content Include="img\arrow-right2.png" />
+    <Content Include="img\arrowleft.png" />
+    <Content Include="img\arrowright.png" />
+    <Content Include="img\bg-orange.png" />
+    <Content Include="img\collapse.png" />
+    <Content Include="img\collapsegrey.png" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\discussion.png" />
+    <Content Include="img\download.png" />
+    <Content Include="img\error.png" />
+    <Content Include="img\event-course.png" />
+    <Content Include="img\event-group.png" />
+    <Content Include="img\event-site.png" />
+    <Content Include="img\event-user.png" />
+    <Content Include="img\expand.png" />
+    <Content Include="img\expandgrey.png" />
+    <Content Include="img\files\archive-64.png" />
+    <Content Include="img\files\audio-64.png" />
+    <Content Include="img\files\avi-64.png" />
+    <Content Include="img\files\base-64.png" />
+    <Content Include="img\files\bmp-64.png" />
+    <Content Include="img\files\calc-64.png" />
+    <Content Include="img\files\chart-64.png" />
+    <Content Include="img\files\database-64.png" />
+    <Content Include="img\files\document-64.png" />
+    <Content Include="img\files\draw-64.png" />
+    <Content Include="img\files\eps-64.png" />
+    <Content Include="img\files\flash-64.png" />
+    <Content Include="img\files\folder-64.png" />
+    <Content Include="img\files\folder-open-64.png" />
+    <Content Include="img\files\gif-64.png" />
+    <Content Include="img\files\html-64.png" />
+    <Content Include="img\files\image-64.png" />
+    <Content Include="img\files\impress-64.png" />
+    <Content Include="img\files\isf-64.png" />
+    <Content Include="img\files\jpeg-64.png" />
+    <Content Include="img\files\markup-64.png" />
+    <Content Include="img\files\math-64.png" />
+    <Content Include="img\files\moodle-64.png" />
+    <Content Include="img\files\mp3-64.png" />
+    <Content Include="img\files\mpeg-64.png" />
+    <Content Include="img\files\oth-64.png" />
+    <Content Include="img\files\pdf-64.png" />
+    <Content Include="img\files\png-64.png" />
+    <Content Include="img\files\powerpoint-64.png" />
+    <Content Include="img\files\psd-64.png" />
+    <Content Include="img\files\quicktime-64.png" />
+    <Content Include="img\files\sourcecode-64.png" />
+    <Content Include="img\files\spreadsheet-64.png" />
+    <Content Include="img\files\text-64.png" />
+    <Content Include="img\files\tiff-64.png" />
+    <Content Include="img\files\unknown-64.png" />
+    <Content Include="img\files\video-64.png" />
+    <Content Include="img\files\wav-64.png" />
+    <Content Include="img\files\wmv-64.png" />
+    <Content Include="img\files\writer-64.png" />
+    <Content Include="img\folder.png" />
+    <Content Include="img\grades\agg_mean.png" />
+    <Content Include="img\grades\agg_sum.png" />
+    <Content Include="img\grades\manual_item.png" />
+    <Content Include="img\grades\outcomes.png" />
+    <Content Include="img\header-bg.png" />
+    <Content Include="img\header-content.png" />
+    <Content Include="img\header-participants.png" />
+    <Content Include="img\ico-arrowdown.png" />
+    <Content Include="img\ico-arrowright.png" />
+    <Content Include="img\ico-back.png" />
+    <Content Include="img\ico-contacts.png" />
+    <Content Include="img\ico-course.png" />
+    <Content Include="img\ico-help.png" />
+    <Content Include="img\ico-mail.png" />
+    <Content Include="img\ico-menu.png" />
+    <Content Include="img\ico-movie.png" />
+    <Content Include="img\ico-network.png" />
+    <Content Include="img\ico-news.png" />
+    <Content Include="img\ico-pencil.png" />
+    <Content Include="img\ico-picture.png" />
+    <Content Include="img\ico-presentation.png" />
+    <Content Include="img\ico-settings.png" />
+    <Content Include="img\ico-userarrowdown.png" />
+    <Content Include="img\ico-userarrowright.png" />
+    <Content Include="img\icon\.pgbomit" />
+    <Content Include="img\icon\android\.DS_Store" />
+    <Content Include="img\icon\android\icon-144-xxhdpi.png" />
+    <Content Include="img\icon\android\icon-36-ldpi.png" />
+    <Content Include="img\icon\android\icon-48-mdpi.png" />
+    <Content Include="img\icon\android\icon-72-hdpi.png" />
+    <Content Include="img\icon\android\icon-96-xhdpi.png" />
+    <Content Include="img\icon\icon.icns" />
+    <Content Include="img\icon\ios\icon-40%402x.png" />
+    <Content Include="img\icon\ios\icon-40%403x.png" />
+    <Content Include="img\icon\ios\icon-40.png" />
+    <Content Include="img\icon\ios\icon-57%402x.png" />
+    <Content Include="img\icon\ios\icon-57.png" />
+    <Content Include="img\icon\ios\icon-60%402x.png" />
+    <Content Include="img\icon\ios\icon-60%403x.png" />
+    <Content Include="img\icon\ios\icon-60.png" />
+    <Content Include="img\icon\ios\icon-72%402x.png" />
+    <Content Include="img\icon\ios\icon-72.png" />
+    <Content Include="img\icon\ios\icon-76%402x.png" />
+    <Content Include="img\icon\ios\icon-76.png" />
+    <Content Include="img\icon\ios\icon-small%402x.png" />
+    <Content Include="img\icon\ios\icon-small%403x.png" />
+    <Content Include="img\icon\ios\icon-small.png" />
+    <Content Include="img\icon\ios\iTunesArtwork%402x.png" />
+    <Content Include="img\icon\ios\iTunesArtwork.png" />
+    <Content Include="img\icon\w8\icon-150.png" />
+    <Content Include="img\icon\w8\icon-30.png" />
+    <Content Include="img\icon\w8\icon-50.png" />
+    <Content Include="img\icon\wp8\icon-173.png" />
+    <Content Include="img\icon\wp8\icon-62.png" />
+    <Content Include="img\info.png" />
+    <Content Include="img\list-rightarrow.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\loadingblack.gif" />
+    <Content Include="img\loadingwhite.gif" />
+    <Content Include="img\login-logo.png" />
+    <Content Include="img\logo-cva.png" />
+    <Content Include="img\logout.png" />
+    <Content Include="img\message.png" />
+    <Content Include="img\mod\assign.png" />
+    <Content Include="img\mod\assignment.png" />
+    <Content Include="img\mod\book.png" />
+    <Content Include="img\mod\chat.png" />
+    <Content Include="img\mod\choice.png" />
+    <Content Include="img\mod\data.png" />
+    <Content Include="img\mod\database.png" />
+    <Content Include="img\mod\date.png" />
+    <Content Include="img\mod\external-tool.png" />
+    <Content Include="img\mod\feedback.png" />
+    <Content Include="img\mod\file.png" />
+    <Content Include="img\mod\folder.png" />
+    <Content Include="img\mod\forum.png" />
+    <Content Include="img\mod\glossary.png" />
+    <Content Include="img\mod\ims.png" />
+    <Content Include="img\mod\imscp.png" />
+    <Content Include="img\mod\label.png" />
+    <Content Include="img\mod\lesson.png" />
+    <Content Include="img\mod\lti.png" />
+    <Content Include="img\mod\page.png" />
+    <Content Include="img\mod\quiz.png" />
+    <Content Include="img\mod\resource.png" />
+    <Content Include="img\mod\scorm.png" />
+    <Content Include="img\mod\survey.png" />
+    <Content Include="img\mod\url.png" />
+    <Content Include="img\mod\wiki.png" />
+    <Content Include="img\mod\workshop.png" />
+    <Content Include="img\received.png" />
+    <Content Include="img\reload.png" />
+    <Content Include="img\reloadblack.png" />
+    <Content Include="img\reloadgrey.png" />
+    <Content Include="img\sent.png" />
+    <Content Include="img\splash\.pgbomit" />
+    <Content Include="img\splash\android\android_hdpi_portrait.png" />
+    <Content Include="img\splash\android\android_ldpi_portrait.png" />
+    <Content Include="img\splash\android\android_mdpi_portrait.png" />
+    <Content Include="img\splash\android\android_xhdpi_portrait.png" />
+    <Content Include="img\splash\ios\ipad_landscape.png" />
+    <Content Include="img\splash\ios\ipad_portrait.png" />
+    <Content Include="img\splash\ios\ipad_retina_landscape.png" />
+    <Content Include="img\splash\ios\ipad_retina_portrait.png" />
+    <Content Include="img\splash\ios\iphone5.png" />
+    <Content Include="img\splash\ios\iphone_portrait.png" />
+    <Content Include="img\splash\ios\iphone_retina_portrait.png" />
+    <Content Include="img\time.png" />
+    <Content Include="img\userimage.png" />
+    <Content Include="img\website.png" />
+    <Content Include="lang\ar.json" />
+    <Content Include="lang\bg.json" />
+    <Content Include="lang\ca.json" />
+    <Content Include="lang\cs.json" />
+    <Content Include="lang\de.json" />
+    <Content Include="lang\en.json" />
+    <Content Include="lang\es.json" />
+    <Content Include="lang\es_mx.json" />
+    <Content Include="lang\eu.json" />
+    <Content Include="lang\fa.json" />
+    <Content Include="lang\fr.json" />
+    <Content Include="lang\he.json" />
+    <Content Include="lang\hu.json" />
+    <Content Include="lang\it.json" />
+    <Content Include="lang\ja.json" />
+    <Content Include="lang\nl.json" />
+    <Content Include="lang\pt_br.json" />
+    <Content Include="lang\ru.json" />
+    <Content Include="lang\sv.json" />
+    <Content Include="lang\tr.json" />
+    <Content Include="lang\zh_cn.json" />
+    <Content Include="lang\zh_tw.json" />
+    <Content Include="less\layout.less" />
+    <Content Include="less\styles.less" />
+    <Content Include="lib\app.js" />
+    <Content Include="lib\mm.cache.js" />
+    <Content Include="lib\mm.db.js" />
+    <Content Include="lib\mm.emulator.js" />
+    <Content Include="lib\mm.fs.js" />
+    <Content Include="lib\mm.js" />
+    <Content Include="lib\mm.lang.js" />
+    <Content Include="lib\mm.panels.js" />
+    <Content Include="lib\mm.rdebugger.js" />
+    <Content Include="lib\mm.settings.js" />
+    <Content Include="lib\mm.sync.js" />
+    <Content Include="lib\mm.tpl.js" />
+    <Content Include="lib\mm.util.js" />
+    <Content Include="lib\mm.widgets.js" />
+    <Content Include="lib\scroll.js" />
+    <Content Include="lib\worker.js" />
+    <Content Include="merges\android\scripts\android2.3-jscompat.js" />
+    <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Folder Include="merges\ios\" />
+    <Content Include="merges\windows\scripts\platformOverrides.js" />
+    <Content Include="merges\windows\scripts\winstore-jscompat.js" />
+    <Folder Include="merges\wp8\" />
+    <Folder Include="res\icons\android\" />
+    <Folder Include="res\icons\ios\" />
+    <Folder Include="res\icons\wp8\" />
+    <Folder Include="res\icons\windows\" />
+    <Folder Include="res\screens\android\" />
+    <Folder Include="res\screens\ios\" />
+    <Folder Include="res\screens\windows\" />
+    <Folder Include="res\screens\wp8\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <TypeScriptCompile Include="scripts\index.ts" />
+    <TypeScriptCompile Include="scripts\platformOverrides.ts" />
+    <Content Include="css\index.css" />
+    <Content Include="packages.config" />
+    <Content Include="plugins\org.apache.cordova.battery-status\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.battery-status\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.battery-status\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.battery-status\package.json" />
+    <Content Include="plugins\org.apache.cordova.battery-status\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.battery-status\README.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\android\BatteryListener.java" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\blackberry10\index.js" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\firefoxos\BatteryProxy.js" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\ios\CDVBattery.h" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\ios\CDVBattery.m" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\tizen\BatteryStatusProxy.js" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\ubuntu\battery.cpp" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\ubuntu\battery.h" />
+    <Content Include="plugins\org.apache.cordova.battery-status\src\wp\Battery.cs" />
+    <Content Include="plugins\org.apache.cordova.battery-status\tests\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.battery-status\tests\tests.js" />
+    <Content Include="plugins\org.apache.cordova.battery-status\www\battery.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.globalization\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.globalization\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.globalization\package.json" />
+    <Content Include="plugins\org.apache.cordova.globalization\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.globalization\README.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\android\Globalization.java" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\android\GlobalizationError.java" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\index.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\.cproject" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\.project" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\device\libGlobalization.so" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\autolink.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\config.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\features.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\forwards.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\json.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\reader.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\value.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json\writer.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_batchallocator.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_internalarray.inl" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_internalmap.inl" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_reader.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_value.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_valueiterator.inl" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\json_writer.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\plugin.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\plugin.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\tokenizer.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\public\tokenizer.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\simulator\libGlobalization.so" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\src\globalization_js.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\src\globalization_js.hpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\src\globalization_ndk.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\blackberry10\native\src\globalization_ndk.hpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\firefoxos\GlobalizationProxy.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\ios\CDVGlobalization.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\ios\CDVGlobalization.m" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\tizen\GlobalizationProxy.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\ubuntu\globalization.cpp" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\ubuntu\globalization.h" />
+    <Content Include="plugins\org.apache.cordova.globalization\src\wp\Globalization.cs" />
+    <Content Include="plugins\org.apache.cordova.globalization\tests\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.globalization\tests\tests.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\l10n.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\l10n_date.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ar.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.as.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ast.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.bg.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.bn-BD.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.bn-IN.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ca.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.cs.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.cy.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.da.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.de.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.el.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.en-GB.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.en-US.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.eo.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.es.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.et.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.eu.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ff.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.fr.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.fy-NL.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ga-IE.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.gd.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.gl.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.gu.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.he.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.hi-IN.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.hr.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.hu.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.id.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ini" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.it.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ja.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.km.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.kn.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ko.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.lij.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.lt.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.mai.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.mk.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ml.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.mr.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ms.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.nb-NO.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ne-NP.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.nl.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.or.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.pa.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.pl.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.pt-BR.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ro.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ru.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.si.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sk.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sl.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.son.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sq.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sr-Cyrl.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sr-Latn.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sv-SE.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.sw.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ta.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.te.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.th.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.tr.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.ur.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.vi.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.xh.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.zh-CN.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\firefoxos\locales\date.zh-TW.properties" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\globalization.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\GlobalizationError.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\ubuntu\globalization.js" />
+    <Content Include="res\icons\android\icon-36-ldpi.png" />
+    <Content Include="res\icons\android\icon-48-mdpi.png" />
+    <Content Include="res\icons\android\icon-72-hdpi.png" />
+    <Content Include="res\icons\android\icon-96-xhdpi.png" />
+    <Content Include="res\icons\ios\icon-40.png" />
+    <Content Include="res\icons\ios\icon-40-2x.png" />
+    <Content Include="res\icons\ios\icon-50.png" />
+    <Content Include="res\icons\ios\icon-50-2x.png" />
+    <Content Include="res\icons\ios\icon-57.png" />
+    <Content Include="res\icons\ios\icon-57-2x.png" />
+    <Content Include="res\icons\ios\icon-60.png" />
+    <Content Include="res\icons\ios\icon-60-2x.png" />
+    <Content Include="res\icons\ios\icon-72.png" />
+    <Content Include="res\icons\ios\icon-72-2x.png" />
+    <Content Include="res\icons\ios\icon-76.png" />
+    <Content Include="res\icons\ios\icon-76-2x.png" />
+    <Content Include="res\icons\ios\icon-small.png" />
+    <Content Include="res\icons\ios\icon-small-2x.png" />
+    <Content Include="res\icons\windows\logo.png" />
+    <Content Include="res\icons\windows\smalllogo.png" />
+    <Content Include="res\icons\windows\Square150x150Logo.scale-240.png" />
+    <Content Include="res\icons\windows\Square44x44Logo.scale-240.png" />
+    <Content Include="res\icons\windows\Square71x71Logo.scale-240.png" />
+    <Content Include="res\icons\windows\storelogo.png" />
+    <Content Include="res\icons\windows\StoreLogo.scale-240.png" />
+    <Content Include="res\icons\windows\Wide310x150Logo.scale-240.png" />
+    <Content Include="res\icons\wp8\icon-62-tile.png" />
+    <Content Include="res\icons\wp8\icon-173-tile.png" />
+    <Content Include="res\native\android\ant.properties" />
+    <Content Include="res\screens\android\screen-hdpi-landscape.png" />
+    <Content Include="res\screens\android\screen-hdpi-portrait.png" />
+    <Content Include="res\screens\android\screen-ldpi-landscape.png" />
+    <Content Include="res\screens\android\screen-ldpi-portrait.png" />
+    <Content Include="res\screens\android\screen-mdpi-landscape.png" />
+    <Content Include="res\screens\android\screen-mdpi-portrait.png" />
+    <Content Include="res\screens\android\screen-xhdpi-landscape.png" />
+    <Content Include="res\screens\android\screen-xhdpi-portrait.png" />
+    <Content Include="res\screens\ios\screen-ipad-landscape.png" />
+    <Content Include="res\screens\ios\screen-ipad-landscape-2x.png" />
+    <Content Include="res\screens\ios\screen-ipad-portrait.png" />
+    <Content Include="res\screens\ios\screen-ipad-portrait-2x.png" />
+    <Content Include="res\screens\ios\screen-iphone-568h-2x.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait-2x.png" />
+    <Content Include="res\screens\windows\splashscreen.png" />
+    <Content Include="res\screens\windows\SplashScreen.scale-240.png" />
+    <Content Include="res\screens\wp8\screen-portrait.jpg" />
+    <TypeScriptCompile Include="scripts\typings\cordova\cordova.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\BatteryStatus.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Camera.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Contacts.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Device.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceMotion.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceOrientation.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Dialogs.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileSystem.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileTransfer.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Globalization.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\InAppBrowser.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Media.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\MediaCapture.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\NetworkInformation.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Push.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Splashscreen.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Vibration.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\WebSQL.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <DefaultReferenceGroup>Implicit (Multi-Device Apps)</DefaultReferenceGroup>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Distribution'">
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CordovaTools\vs-mda-targets\Microsoft.MDA.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CordovaTools\vs-mda-targets\Microsoft.TypeScript.MDA.targets" />
+  <PropertyGroup>
+    <ProjectUISubcaption>Tools for Apache Cordova</ProjectUISubcaption>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetPlatformIdentifier>MDD</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Target Name="EnsureBuildPrerequisites">
+    <!-- These errors will trigger if building from inside Visual Studio and requirements could not be determined -->
+    <Error Condition="$(MDAPropertiesEvaluated) == 'true' And $(NodeJsDir) == ''" Text="Path to NodeJs could not be determined. Please check that NodeJs has been installed." />
+    <Error Condition="$(MDAPropertiesEvaluated) == 'true' And $(MDAVsixDir) == ''" Text="Path to the Visual Studio Extension for Tools for Apache Cordova could not be determined. Please check that the extension has been installed." />
+    <!-- These errors will trigger if building from outside Visual Studio (e.g. command line) and environment variables have not been set -->
+    <Error Condition="$(MDAPropertiesEvaluated) == '' And $(NodeJsDir) == ''" Text="Path to NodeJs has not been specified. Please check that NodeJs has been installed and set the NodeJsDir environment variable before building." />
+    <Error Condition="$(MDAPropertiesEvaluated) == '' And $(MDAVsixDir) == ''" Text="Path to Visual Studio Extension for Tools for Apache Cordova has not been specified. Please install it and set the MDAVsixDir environment variable before building." />
+    <!-- Sanity check that things exist in the specified places. These are more likely to fail if building outside Visual Studio and the required environment variables have not been set, or set incorrectly. -->
+    <Error Condition="!Exists('$(NodeJsDir)') Or !Exists('$(NodeJsDir)\node.exe')" Text="The specified NodeJs directory $(NodeJsDir) either does not exist, or does not contain node.exe. Please check that NodeJs has been installed, and set the NodeJsDir variable to the correct directory." />
+    <Error Condition="!Exists('$(MDAVsixDir)') Or !Exists('$(MDAVsixDir)\packages\vs-mda')" Text="The specified directory to the Visual Studio extension $(MDAVsixDir)\node.exe either does not exist, or does not contain a packages\vs-mda sub-directory. Please check that the extension directory exists and set the MDAVsixDir variable to the correct directory." />
+    <!-- Installs (if necessary) the supporting Nodejs module -->
+    <Exec Command="&quot;$(MDAVsixDir)&quot;\packages\vs-mda\install &quot;$(NodeJsDir)&quot; &quot;$(MDAVsixDir)&quot;\packages\vs-mda" />
+  </Target>
+</Project>
