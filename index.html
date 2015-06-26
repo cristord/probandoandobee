@@ -243,6 +243,7 @@
             </div>
         </a>
         <ul class="nav submenu">
+
             <% _.each(courses, function(course) { %>
             <li class="nav-item">
                 <a href="#" class="toogler expand touch-row">
@@ -268,6 +269,12 @@
                 </ul>
             </li>
             <% }); %>
+            <li class="nav-item no-arrow">
+                <a href="http://www.faithory.com/courses/" target="_blank" class="touch-row">
+                    <span class="plugin-ico app-ico"><img src="img/ico-network.png" border="0"></span>
+                    Inscribirse
+                </a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -350,7 +357,7 @@
         <p>
             <center id="cargando"><img src="img/loading.gif"></center>
             <input type="submit" name="add"   id="addsitebutton"   value="<%= MM.lang.s("add") %>">
-            <br />
+            <br>
             <center id="cuenta">Si no tienes una cuenta, puedes crear una.</center>
             <input type="button" id="register" value="Crear cuenta">
             <input type="button" name="reset" id="resetsitebutton" value="<%= MM.lang.s("reset") %>">
