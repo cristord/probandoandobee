@@ -60,7 +60,10 @@
     <script language="javascript">
         // We should wait to phonegap, if not, we get errors like:
         // http://rickluna.com/wp/2012/04/solving-the-connection-to-the-server-was-unsuccessful-error-in-androidphonegap/
-        $(document).bind('deviceready', function() {
+        $(document).bind('deviceready', function () {
+
+            admob.createBannerView({ publisherId: "ca-app-pub-1630614320477214/3971515286" });
+
             MM.log('Deviceready fired');
             MM.deviceReady = true;
             // Store the device locale for further uses.
