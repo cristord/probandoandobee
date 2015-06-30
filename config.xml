@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.faithory.courses"
         versionCode = "390"
-        version   = "1.15">
+        version   = "1.16">
     <name>Faithory</name>
   <content src="index.html" />
 
@@ -17,7 +17,7 @@
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>1.15</string>
+        <string>1.16</string>
     </gap:config-file>
 
     <preference name="phonegap-version" value="3.6.3" />
@@ -85,7 +85,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="com.phonegap.plugin.statusbar" />
-    <gap:plugin name="com.ads.tappx" source="plugins.cordova.io" />
+    <gap:plugin name="com.ads.tappx" />
 
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="net.tunts.webintent" />
